@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Bert's Lounge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/bert_stickers.png" type="image/png">
+
+
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loader-cont">
+            <h1 class="loader-text1">Bert's</h1>
+            <h1 class="loader-text2">Lounge</h1>
+            <br><br><br>
+            <p style="color: #192c1d; font-weight: 700; align-items: center;">Loading content, please wait...</p>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+    <audio id="bgm" src="bgm.mp3" loop></audio>
+
+    <button id="muteBtn" class="mute-btn" aria-label="Toggle music">
+        <!-- volume on -->
+        <svg id="iconVolumeOn" xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
+            class="bi bi-volume-up-fill" viewBox="0 0 16 16">
+            <path
+                d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z" />
+            <path
+                d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z" />
+            <path
+                d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06" />
+        </svg>
+
+        <!-- volume off -->
+        <svg id="iconVolumeOff" xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
+            class="bi bi-volume-mute" viewBox="0 0 16 16">
+            <path
+                d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06M6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0" />
+        </svg>
+    </button>
+
+    <div id="main-content">
+
+
+        <div class="header">
+            <div class="header-title">
+                <div class="sticker-wrap">
+                    <span class="click-text">click me! :3</span>
+                    <img src="img/bert_stickers.png" alt="Bert Logo" class="header-sticker">
+                    <span class="sticker-text">Halo</span>
+                    <audio id="popSound" src="pop.mp3" preload="auto"></audio>
+
+                </div>
+
+                <div class="title-text">
+                    <h1 class="header-text1">Bert's</h1>
+                    <h1 class="header-text2">Lounge</h1>
+                </div>
+            </div>
+
+            <p class="info">Welcome to Bert's Lounge. This is my personal space for sharing artwork, ongoing projects,
+                and commission
+                info. Feel free to explore the gallery or check my socials.</p>
+            <div class="btn-container desktop">
+                <button class="social-btn socbtn">
+                    <span class="icon-box" id="socials_iconbox" style="padding-top: 5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                            class="bi bi-link-45deg" viewBox="0 0 16 16">
+                            <path
+                                d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z" />
+                            <path
+                                d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
+                        </svg></span>
+                    <span class="divider" id="socials_iconbox"></span>
+                    <span class="text">Socials</span>
+                </button>
+                <a class="social-btn" href="https://trello.com/b/Jb3tycT1/berts-commison-tracker"
+                    style="text-decoration: none; color: white;">
+                    <span class="icon-box" id="trello_iconbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                            class="bi bi-trello" viewBox="0 0 16 16">
+                            <path
+                                d="M14.1 0H1.903C.852 0 .002.85 0 1.9v12.19A1.9 1.9 0 0 0 1.902 16h12.199A1.9 1.9 0 0 0 16 14.09V1.9A1.9 1.9 0 0 0 14.1 0M7 11.367a.636.636 0 0 1-.64.633H3.593a.633.633 0 0 1-.63-.633V3.583c0-.348.281-.631.63-.633h2.765c.35.002.632.284.633.633zm6.052-3.5a.633.633 0 0 1-.64.633h-2.78A.636.636 0 0 1 9 7.867V3.583a.636.636 0 0 1 .633-.633h2.778c.35.002.631.285.631.633z" />
+                        </svg>
+                    </span>
+                    <span class="divider" id="trello_iconbox"></span>
+                    <span class="text">Trello</span>
+                </a>
+
+                <a class="social-btn" href="comms.html" id="comms-link" style="text-decoration: none; color: white;">
+                    <span class="icon-box" id="comms_iconbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-brush" viewBox="0 0 16 16">
+                            <path
+                                d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.1 6.1 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.1 8.1 0 0 1-3.078.132 4 4 0 0 1-.562-.135 1.4 1.4 0 0 1-.466-.247.7.7 0 0 1-.204-.288.62.62 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896q.19.012.348.048c.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04M4.705 11.912a1.2 1.2 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.4 3.4 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3 3 0 0 0 .126-.75zm1.44.026c.12-.04.277-.1.458-.183a5.1 5.1 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005zm3.582-3.043.002.001h-.002z" />
+                        </svg>
+                    </span>
+                    <span class="divider" id="comms_iconbox"></span>
+                    <span class="text">Commission</span>
+                    </button>
+                </a>
+
+            </div>
+
+            <br>
+        </div>
+        <div class="gallery">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img style="object-position: 80% 100%; " src="img/5.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/6.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/7.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/8.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/9.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/10.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img style="object-position: 0% 100%; " src="img/11.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img style="object-position: 30% 30%; " src="img/12.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <imgsrc="img /13.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/14.jpg" />
+                    </div>
+
+                    <!-- arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- dots -->
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- background blur -->
+                <div class="bg-blur"></div>
+            </div>
+
+        </div>
+        <div class="btn-container mobile">
+            <button class="social-btn socbtn">
+                <span class="icon-box" id="socials_iconbox" style="padding-top: 5px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                        class="bi bi-link-45deg" viewBox="0 0 16 16">
+                        <path
+                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z" />
+                        <path
+                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
+                    </svg></span>
+                <span class="divider" id="socials_iconbox"></span>
+                <span class="text">Socials</span>
+            </button>
+            <a class="social-btn" href="https://trello.com/b/Jb3tycT1/berts-commison-tracker"
+                style="text-decoration: none; color: white;">
+                <span class="icon-box" id="trello_iconbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-trello" viewBox="0 0 16 16">
+                        <path
+                            d="M14.1 0H1.903C.852 0 .002.85 0 1.9v12.19A1.9 1.9 0 0 0 1.902 16h12.199A1.9 1.9 0 0 0 16 14.09V1.9A1.9 1.9 0 0 0 14.1 0M7 11.367a.636.636 0 0 1-.64.633H3.593a.633.633 0 0 1-.63-.633V3.583c0-.348.281-.631.63-.633h2.765c.35.002.632.284.633.633zm6.052-3.5a.633.633 0 0 1-.64.633h-2.78A.636.636 0 0 1 9 7.867V3.583a.636.636 0 0 1 .633-.633h2.778c.35.002.631.285.631.633z" />
+                    </svg>
+                </span>
+                <span class="divider" id="trello_iconbox"></span>
+                <span class="text">Trello</span>
+            </a>
+
+            <a class="social-btn" href="comms.html" id="comms-link" style="text-decoration: none; color: white;">
+                <span class="icon-box" id="comms_iconbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-brush" viewBox="0 0 16 16">
+                        <path
+                            d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.1 6.1 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.1 8.1 0 0 1-3.078.132 4 4 0 0 1-.562-.135 1.4 1.4 0 0 1-.466-.247.7.7 0 0 1-.204-.288.62.62 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896q.19.012.348.048c.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04M4.705 11.912a1.2 1.2 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.4 3.4 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3 3 0 0 0 .126-.75zm1.44.026c.12-.04.277-.1.458-.183a5.1 5.1 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005zm3.582-3.043.002.001h-.002z" />
+                    </svg>
+                </span>
+                <span class="divider" id="comms_iconbox"></span>
+                <span class="text">Comms</span>
+                </button>
+            </a>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="socials-backdrop"></div>
+    <div class="socials hide-scroll">
+        <h2 class="socials-header">Find me on:</h2>
+        <div class="social-icons">
+            <a class="social-btn" href="https://www.instagram.com/lodgebert?igsh=MWF1NG1oNWFxNjdrYQ=="
+                style="text-decoration: none; color: white;" target="_blank">
+                <span class="icon-box" id="insta_iconbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                    </svg>
+                </span>
+                <span class="divider" id="insta_iconbox"></span>
+                <span class="text">Instagram</span>
+                </button>
+            </a>
+            <a class="social-btn" href="https://x.com/lodgebert" style="text-decoration: none; color: white;"
+                target="_blank">
+                <span class="icon-box" id="twitter_iconbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                    </svg>
+                </span>
+                <span class="divider" id="twitter_iconbox"></span>
+                <span class="text">Twitter</span>
+                </button>
+            </a>
+            <a class="social-btn" href="https://bsky.app/profile/lodgebert.bsky.social"
+                style="text-decoration: none; color: white;" target="_blank">
+                <span class="icon-box" id="bsky_iconbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-bluesky" viewBox="0 0 16 16">
+                        <path
+                            d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948" />
+                    </svg>
+                </span>
+                <span class="divider" id="bsky_iconbox"></span>
+                <span class="text">BlueSky</span>
+                </button>
+            </a>
+            <a class="social-btn" href="https://www.furaffinity.net/user/lodgebert"
+                style="text-decoration: none; color: white;" target="_blank">
+                <span class="icon-box" id="furaffinity_iconbox">
+                    <svg height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <image height="50" width="50" href="img/furaffinity.svg" />
+                    </svg>
+
+                </span>
+                <span class="divider" id="furaffinity_iconbox"></span>
+                <span class="text">Furrafinity</span>
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

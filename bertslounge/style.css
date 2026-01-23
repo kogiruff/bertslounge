@@ -1,0 +1,654 @@
+/* Plus Jakarta Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* font family = "Plus Jakarta Sans", sans-serif */
+/* font weight (200-800)
+200 = Extralight
+300 = Light
+400 = Regular
+500 = Medium
+600 = Semibold
+700 = Bold
+800 = Semibold
+*/
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(0deg, rgba(153, 170, 147, 1) 0%, rgba(246, 246, 246, 1) 80%);
+    background-size: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    height: 100%;
+
+}
+
+#main-content.slide-out {
+    animation: slideOut 0.6s ease forwards;
+}
+
+#main-content {
+    animation: slideIn 0.6s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* animasi keluar */
+@keyframes slideOut {
+    to {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+}
+
+#loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    background: linear-gradient(0deg, rgba(153, 170, 147, 1) 0%, rgba(246, 246, 246, 1) 80%);
+    transition: 0.3s;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+
+}
+
+.loader-text1,
+.header-text1 {
+    font-weight: 800;
+    font-size: 75px;
+    margin: 0;
+    line-height: 0.95;
+}
+
+.loader-text2,
+.header-text2 {
+    font-weight: 800;
+    font-size: 46px;
+    color: #42613B;
+    margin: 6px 0 0 0;
+    line-height: 0.75;
+}
+
+#main-content {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 7% auto;
+}
+
+.gallery {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+}
+
+.mySwiper {
+    width: 500px;
+    height: 800px;
+
+}
+
+.swiper-slide {
+    width: 500px;
+    height: 700px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+/* dots */
+.swiper-pagination-bullet {
+    border: 1px solid #7fecab;
+    background: transparent;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #b2ffb0;
+}
+
+/* Mobile Gallery */
+.m-gallery {
+    display: none;
+    margin-left: auto;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+}
+
+
+
+#main-content {
+    position: relative;
+}
+
+.info {
+    margin-top: 50px;
+    font-size: 23px;
+    width: 80%;
+    color: #515151;
+}
+
+.btn-container {
+    position: relative;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.social-btn {
+    width: 100%;
+    height: 90px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 10px;
+    border-radius: 16px;
+    background: linear-gradient(135deg,
+            #2a2f3a,
+            #1b1e26);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    box-shadow:
+        0 0 0 2px rgba(44, 55, 58, 0.25),
+        0 12px 30px rgba(0, 0, 0, 0.35);
+    transition: 0.25s ease;
+}
+
+.social-btn:hover {
+    box-shadow:
+        0 16px 40px rgba(27, 96, 70, 0.45);
+    transform: translateY(-2px);
+}
+
+/* icon box */
+.icon-box {
+    width: 67px;
+    height: 67px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 67px;
+    min-height: 67px;
+    justify-content: center;
+}
+
+/* vertical divider */
+.divider {
+    width: 7px;
+    height: 67px;
+    border-radius: 10px;
+}
+
+#socials_iconbox {
+    background: linear-gradient(135deg,
+            #5872D0,
+            #2D2D6A);
+}
+
+#trello_iconbox {
+    background: linear-gradient(135deg,
+            #D05858,
+            #2D2D6A);
+}
+
+#comms_iconbox {
+    background: linear-gradient(135deg,
+            #D08658,
+            #6A2F2D);
+}
+
+#insta_iconbox {
+    background: linear-gradient(135deg,
+            #7f2aff,
+            #C06F28);
+}
+
+#bsky_iconbox {
+    background: linear-gradient(135deg,
+            #5872D0,
+            #2D2D6A);
+}
+
+#furaffinity_iconbox {
+    background: linear-gradient(135deg,
+            #91E286,
+            #286E2D);
+}
+
+#twitter_iconbox {
+    background: linear-gradient(135deg,
+            #A198BB,
+            #272731);
+}
+
+/* text */
+.text {
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+/* 
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #283027;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+} */
+
+
+.socials {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%) translateY(20px);
+    background: linear-gradient(0deg, rgba(153, 170, 147, 1) 0%, rgba(246, 246, 246, 1) 80%);
+    background-size: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    width: 85%;
+    max-width: 900px;
+    height: auto;
+    padding: 30px;
+    max-height: 80vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s cubic-bezier(.2, .8, .2, 1);
+    z-index: 1002;
+    overflow-y: auto;
+    overflow-x: hidden;
+    will-change: transform, opacity;
+}
+
+.socials.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+    pointer-events: auto;
+}
+
+.socials-backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease;
+    z-index: 1001;
+    backdrop-filter: blur(4px);
+}
+
+.socials-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.socials-header {
+    font-weight: 800;
+    font-size: 60px;
+    padding: 25px;
+    color: #1e3924;
+    text-align: center;
+}
+
+
+/* desktop tetap */
+.gallery {
+    display: flex;
+    margin-left: auto;
+}
+
+.mobile {
+    display: none;
+}
+
+.loader-box {
+    width: 70%;
+    max-width: 420px;
+    text-align: center;
+}
+
+.loader-bar {
+    width: 100%;
+    height: 7px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 999px;
+    overflow: hidden;
+
+}
+
+.loader-progress {
+    height: 100%;
+    width: 0%;
+    background: #1b1e26;
+    transition: width .2s ease;
+}
+
+.loader-text {
+    margin-top: 12px;
+    color: #b7f5d8;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.hide-scroll {
+    overflow-y: auto;
+    /* scroll tetap jalan */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE / Edge lama */
+}
+
+.hide-scroll::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* jarak teks ↔ stiker */
+}
+
+.title-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-sticker {
+    width: 130px;
+    height: auto;
+    rotate: -5deg;
+    margin-top: 10px;
+
+}
+
+.sticker-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.header-sticker {
+    transition: transform 0.15s ease;
+}
+
+/* twitch via class */
+.header-sticker.twitch {
+    animation: twitchUp 0.25s ease;
+}
+
+/* text muncul via class */
+.sticker-text.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+.click-text {
+    position: absolute;
+    top: -15px;
+    /* jarak dari sticker */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    font-weight: 800;
+    color: #1b1e26;
+    letter-spacing: 0.5px;
+    pointer-events: none;
+    /* biar tap tetap ke sticker */
+    white-space: nowrap;
+    rotate: -5deg;
+    animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-6px) rotate(7deg);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+
+
+@keyframes twitchUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-6px);
+    }
+
+    70% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* text */
+.sticker-text {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+    white-space: nowrap;
+}
+
+
+/* hover out handled by transition (fade-slide-down) */
+.mute-btn {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    /* #1b1e26 */
+    color: #172c22;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    backdrop-filter: blur(6px);
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.mute-btn:active {
+    transform: scale(0.9);
+}
+
+.mute-btn svg {
+    width: 70px;
+    height: 70px;
+    fill: #172c22;
+    display: none;
+}
+
+.mute-btn svg.active {
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .info {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .header-title {
+        gap: 25px;
+    }
+
+    .header-sticker {
+        width: 130px;
+    }
+
+    .header-text1 {
+        font-size: 60px;
+    }
+
+    .header-text2 {
+        font-size: 40px;
+    }
+
+    #main-content {
+        margin: 30% auto;
+    }
+
+    .gallery {
+        display: none;
+    }
+
+    .header {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .btn-container {
+        width: 100%;
+    }
+
+    .socials-header {
+        font-size: 30px;
+    }
+
+    .socials {
+        padding: 15px;
+    }
+
+    .social-btn {
+        margin-bottom: 15px;
+    }
+
+    /* ubah layout utama */
+    #main-content {
+        flex-direction: column;
+    }
+
+    /* header jadi flex container */
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* urutan elemen */
+    .info {
+        order: 0;
+    }
+
+    .gallery {
+        order: 1;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-container {
+        order: 3;
+    }
+
+    /* ukuran swiper responsif */
+    .mySwiper {
+        width: 90vw;
+        max-width: 380px;
+        height: 250px;
+    }
+
+    .swiper-slide {
+        width: 90vw;
+        max-width: 380px;
+        height: 250px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .socials .social-btn {
+        height: 80px;
+    }
+}
