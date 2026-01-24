@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-*{
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none
-}
 
 html {
     background: linear-gradient(0deg, rgba(153, 170, 147, 1) 0%, rgba(246, 246, 246, 1) 80%);
@@ -19,6 +14,9 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     height: 100%;
     background: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none
     
 }
 
@@ -407,6 +405,7 @@ body {
     }
 
 }
+
 
 
 
