@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (btnText) btnText.textContent = "Proceed to Comm";
 
             if (proceedLink) {
-                proceedLink.setAttribute("href", "commsform.html");
+                proceedLink.setAttribute("href", "https://forms.gle/T2ukaDUDPqhPd4yo7");
                 proceedLink.style.cursor = "pointer";
             }
         }
@@ -181,4 +181,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Jalankan
     initConfig();
+
 });
