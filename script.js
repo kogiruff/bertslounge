@@ -205,7 +205,6 @@ const texts = [
     "Salve",          // Latin
     "Hej",            // Swedia
     "Ahoj",           // Ceko / Slovakia
-    "שלום",           // Ibrani
     "नमस्ते",         // Hindi
     "Hallo",          // Jerman / Belanda
     "Selam",          // Turki informal
@@ -288,6 +287,7 @@ muteBtn.addEventListener("click", () => {
     }
     isMuted = !isMuted;
 });
+
 
 
 
