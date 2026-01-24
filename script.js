@@ -188,15 +188,31 @@ document.addEventListener("DOMContentLoaded", () => {
 const texts = [
     "Halo",
     "Hello",
-    "こんにちは",
-    "안녕",
-    "Bonjour",
-    "Hola",
-    "Ciao",
+    "こんにちは",      // Jepang
+    "안녕",           // Korea
+    "Bonjour",        // Prancis
+    "Hola",           // Spanyol
+    "Ciao",           // Italia
     "Heya",
     "Hai",
-    "你好"
+    "你好",           // Mandarin
+    "Привет",        // Rusia
+    "Olá",            // Portugis
+    "مرحبا",          // Arab
+    "Merhaba",        // Turki
+    "สวัสดี",         // Thailand
+    "Xin chào",       // Vietnam
+    "Salve",          // Latin
+    "Hej",            // Swedia
+    "Ahoj",           // Ceko / Slovakia
+    "שלום",           // Ibrani
+    "नमस्ते",         // Hindi
+    "Hallo",          // Jerman / Belanda
+    "Selam",          // Turki informal
+    "Yo",
+    "Sup"
 ];
+
 
 const stickerWrap = document.querySelector(".sticker-wrap");
 const sticker = document.querySelector(".header-sticker");
@@ -272,5 +288,6 @@ muteBtn.addEventListener("click", () => {
     }
     isMuted = !isMuted;
 });
+
 
 
