@@ -5,7 +5,7 @@ const greetings = [
   "Hola", "Ciao", "Heya", "Hai", "你好",
   "Привет", "Olá", "مرحبا", "Merhaba", "สวัสดี",
   "Xin chào", "Salve", "Hej", "Ahoj", "नमस्ते",
-  "Hallo", "Selam", "Yo", "Sup"
+  "Hallo", "Selam", "Yo", "Sup", "Woof!", "Meow!", "Awroo"
 ];
 
 window.onload = function () {
@@ -232,3 +232,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
