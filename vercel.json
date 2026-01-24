@@ -1,3 +1,11 @@
 {
+  "rewrites": [
+    { "source": "/comms.js", "destination": "/404" },
+    { "source": "/script.js", "destination": "/404" },
+    { "source": "/stylecomms.css", "destination": "/404" },
+    { "source": "/style.css", "destination": "/404" }
+  ]
   "cleanUrls": true
 }
+
+
