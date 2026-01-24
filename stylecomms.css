@@ -114,7 +114,7 @@ main {
 }
 
 .price span {
-    font-size: 22px;
+    font-size: 35px;
 
 }
 
@@ -403,4 +403,5 @@ body {
     .topbar h1 {
         margin: 0;
     }
+
 }
