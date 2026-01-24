@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // transition
   const commsLink = document.getElementById("comms-link");
+  const mcommsLink = document.getElementById("m-comms-link");
   const mainContent = document.getElementById("main-content");
 
   if (commsLink) {
@@ -93,7 +94,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 600);
     });
   }
-
+  if (mcommsLink) {
+    mcommsLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      const href = commsLink.getAttribute("href");
+      mainContent.classList.add("slide-out");
+      setTimeout(() => {
+        window.location.href = href;
+      }, 600);
+    });
+  }
   // socials
   const socBtns = document.querySelectorAll(".socbtn");
   const socPanel = document.querySelector(".socials");
@@ -232,4 +242,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
 
