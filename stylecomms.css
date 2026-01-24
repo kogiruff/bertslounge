@@ -246,9 +246,9 @@ footer {
     justify-content: center;
     flex-direction: column;
     box-sizing: border-box;
-    user-select: text;
-    -webkit-user-select: text;
-    -ms-user-select: text;
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -ms-user-select: text !important;
 }
 
 .hide-scroll {
@@ -408,4 +408,5 @@ body {
     }
 
 }
+
 
