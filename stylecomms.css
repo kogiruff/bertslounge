@@ -75,6 +75,7 @@ main {
     cursor: pointer;
     text-decoration: none;
     color: #1E3924;
+    padding-bottom: 15px;
 }
 
 /* pricing grid */
@@ -405,6 +406,7 @@ body {
     }
 
 }
+
 
 
 
