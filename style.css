@@ -125,7 +125,6 @@ body {
     height: 700px;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-slide img {
@@ -184,6 +183,7 @@ body {
     gap: 5px;
     padding: 10px 10px;
     border-radius: 16px;
+    border: 2px solid #515151;
     background: linear-gradient(135deg,
             #2a2f3a,
             #1b1e26);
@@ -651,4 +651,5 @@ footer {
     .socials .social-btn {
         height: 80px;
     }
+
 }
