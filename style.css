@@ -116,7 +116,7 @@ body {
 
 .mySwiper {
     width: 500px;
-    height: 800px;
+    border-radius: 25px;
 
 }
 
@@ -653,4 +653,5 @@ footer {
     }
 
 }
+
 
