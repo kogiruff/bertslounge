@@ -183,7 +183,7 @@ body {
     gap: 5px;
     padding: 10px 10px;
     border-radius: 16px;
-    border: 2px solid #515151;
+    border: 0px;
     background: linear-gradient(135deg,
             #2a2f3a,
             #1b1e26);
@@ -193,7 +193,7 @@ body {
     cursor: pointer;
     position: relative;
     box-shadow:
-        0 0 0 2px rgba(44, 55, 58, 0.25),
+        0 0 5px 4px rgba(44, 55, 58, 0.25),
         0 12px 30px rgba(0, 0, 0, 0.35);
     transition: 0.25s ease;
 }
@@ -653,3 +653,4 @@ footer {
     }
 
 }
+
