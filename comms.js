@@ -110,25 +110,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
-        // 6. fetch config dari gsheet
+        // 6. fetch config dari API (Supabase, via admin panel)
     async function initConfig() {
         try {
-            const res = await fetch(
-                "https://opensheet.elk.sh/1SNFcMzfhPWWjxzO-PLXK5VYh1CAFnTkAubymXaG2rwA/1",
-                { cache: "no-store" }
-            );
+            const res = await fetch("/api/commission-status", { cache: "no-store" });
 
             if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
             const data = await res.json();
-            console.log("Data Sheet:", data);
-            const found = data.find(d => d.key && d.key.toLowerCase() === "open");
-            const rawStatus = found ? found.value : "FALSE";
-            console.log("Status Raw:", rawStatus);
-            if (String(rawStatus).trim().toLowerCase() === "true") {
-                COMMISSION_OPEN = true;
-            } else {
-                COMMISSION_OPEN = false;
-            }
+            console.log("Commission Status:", data);
+            COMMISSION_OPEN = Boolean(data.open);
             console.log("Status Final:", COMMISSION_OPEN);
             updateUI();
         } catch (error) {
@@ -139,4 +129,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     initConfig();
 });
-
