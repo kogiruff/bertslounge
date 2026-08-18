@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnText = proceedBtn ? proceedBtn.querySelector(".btn-text") : null;
 
     let COMMISSION_OPEN = false;
+    let FORMS_LINK = '';
 
     // 2. nav + anim
     if (link) {
@@ -105,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("UI Mode: OPEN");
             if (btnText) btnText.textContent = "Proceed to Comm";
             if (proceedLink) {
-                proceedLink.setAttribute("href", "https://forms.gle/T2ukaDUDPqhPd4yo7");
+                proceedLink.setAttribute("href", FORMS_LINK);
                 proceedLink.style.cursor = "pointer";
             }
         }
@@ -119,11 +120,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await res.json();
             console.log("Commission Status:", data);
             COMMISSION_OPEN = Boolean(data.open);
+            FORMS_LINK = data.formsLink || '';
             console.log("Status Final:", COMMISSION_OPEN);
             updateUI();
         } catch (error) {
             console.error("Gagal mengambil config:", error);
             COMMISSION_OPEN = false; // Default close jika error
+            FORMS_LINK = '';
             updateUI();
         }
     }

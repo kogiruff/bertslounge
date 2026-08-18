@@ -7,8 +7,9 @@ module.exports = async function handler(req, res) {
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed.' });
   try {
     const status = await getCommissionStatus();
-    if (status) return res.status(200).json({ ...status, source: 'supabase' });
-    return res.status(200).json({ open: false, updatedAt: null, source: 'default' });
+    const formsLink = process.env.FORMS_LINK || null;
+    if (status) return res.status(200).json({ ...status, formsLink, source: 'supabase' });
+    return res.status(200).json({ open: false, updatedAt: null, formsLink, source: 'default' });
   } catch (error) {
     console.error('Commission status lookup failed:', error.message);
     return res.status(503).json({ open: false, error: 'Commission status is temporarily unavailable.' });
