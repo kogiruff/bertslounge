@@ -12,6 +12,7 @@
 <body>
   <main class="panel">
     <header>
+      <p class="eyebrow">Bert's Lounge</p>
       <h1>Commission admin</h1>
       <p>Manage public commission availability.</p>
     </header>
@@ -28,7 +29,7 @@
 
       <h2>Availability</h2>
       <p id="status-text" aria-live="polite" style="display: none;">Loading…</p>
-      
+
       <div class="toggle-wrapper">
         <label class="toggle">
           <input id="commission-toggle" type="checkbox" />
@@ -36,6 +37,8 @@
         </label>
         <strong id="toggle-label" class="status-closed">Closed</strong>
       </div>
+
+      <p class="meta">Signed in as: <span id="admin-email">—</span></p>
 
       <div class="actions">
         <button id="save-status" class="save-btn" type="button">Save status</button>
